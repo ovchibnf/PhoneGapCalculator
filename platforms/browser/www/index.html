@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+		<script type="text/javascript" src="calc.js"></script>
+		<style>
+		.button-number{
+		cursor: pointer;
+		font-size: 23px;
+		width: 105%;
+		height: 70px;
+		background-color: orange;
+		color: black;
+		border-radius: 50px;
+		border-color: black;
+		text-align: center;
+		outline: none;
+		}
+		.button-func{
+		cursor: pointer;
+		font-size: 23px;
+		width: 105%;
+		height: 70px;
+		color: black;
+		border-radius: 50px;
+		border-color: black;
+		text-align: center;
+		background-color: white;
+		outline: none;
+		}
+		.button-equal{
+		font-size: 23px;
+		cursor: pointer;
+		width: 105%;
+		height: 70px;
+		background-color: white;
+		color: black;
+        border-radius: 50px;
+		border-color: black;
+		text-align: center;
+		outline: none;
+		}
+		input.textview{
+		font-size: 40px;
+		width: 95%;
+		height: 100%; 
+		margin-left: 2%;
+		border: none;
+		background-color: #DDDDDD;
+		text-indent: 5%;
+		}
+		.main {
+		height: 100%;
+		/*margin-top: 65%;*/
+		}
+		.table {}
+		table {
+		margin:auto; width:100%; height:200%;
+		margin-top: 5%; 
+		}
+		body {
+		background-color: black;
+		}
+		html, body { height:100%;
+		}
+		.form {}
+		</style>
+    </head>
+    <body>
+		<div class="main">
+			<form name = "form" class="form">
+				<input class="textview" name="textview"></input>
+				<input class="textview" name="textview1"></input>
+				<table class="table">
+					<tr>
+					<td><input class="button-func" type="button" value="C" onclick="clean()"></td>
+					<td><input class="button-func" type="button" value="<" onclick="back()"></td>
+					<td><input class="button-func" type="button" value="/" onclick="insert1('/')"></td>
+					<td><input class="button-func" type="button" value="√" onclick="insert1('^(1/2)')"></td>
+					<td><input class="button-func" type="button" value=")" onclick="insert1(')')"></td>
+					</tr>
+					<tr>
+					<td><input class="button-number" type="button" value="7" onclick="insert(7)"></td>
+					<td><input class="button-number" type="button" value="8" onclick="insert(8)"></td>
+					<td><input class="button-number" type="button" value="9" onclick="insert(9)"></td>
+					<td><input class="button-func" type="button" value="-" onclick="insert1('-')"></td>
+					<td><input class="button-func" type="button" value="(" onclick="insert1('(')"></td>
+					</tr>
+					<tr>
+					<td><input class="button-number" type="button" value="4" onclick="insert(4)"></td>
+					<td><input class="button-number" type="button" value="5" onclick="insert(5)"></td>
+					<td><input class="button-number" type="button" value="6" onclick="insert(6)"></td>
+					<td><input class="button-func" type="button" value="*" onclick="insert1('*')"></td>
+					<td><input class="button-func" type="button" value="+" onclick="insert1('+')"></td>
+					</tr>
+					<tr>
+					<td><input class="button-number" type="button" value="1" onclick="insert(1)"></td>
+					<td><input class="button-number" type="button" value="2" onclick="insert(2)"></td>
+					<td><input class="button-number" type="button" value="3" onclick="insert(3)"></td>
+					<td><input class="button-func" type="button" value="^2" onclick="insert1('**2')"></td>
+					<td><input class="button-equal" type="button" value="=" onclick="equal()"></td>
+					</tr>
+					<tr>
+					<td><input class="button-number" type="button" value="0" onclick="insert(0)"></td>
+					<td><input class="button-func" type="button" value="." onclick="insert('.')"></td>
+					<td><input class="button-func" type="button" value="^" onclick="insert('**')"></td>
+					<td><input class="button-func" type="button" value="+-" onclick="insert3()"></td>
+					</tr>
+				</table>
+			</form>
+			
+			<input type="button" value="Узнать ориентацию" onclick="getOrientation()">
+		</div>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
